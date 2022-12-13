@@ -5,14 +5,14 @@ defaultPartsOfPages();
 
 
 var pagepath=window.location.pathname+window.location.search;
-if(pagepath=='index.html'){
+if(pagepath=='/enigma/index.html'||pagepath=='/enigma/'){
     indexPage();
     //sliderFunct();
 }
-if(pagepath=='loginPage.html'){
+if(pagepath=='/enigma/loginPage.html'){
     loginPage();
 }
-if(pagepath=='productsPage.html'){
+if(pagepath=='/enigma/productsPage.html'){
     console.log("ulazak u product page");
     productsPage();
 }
