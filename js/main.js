@@ -201,11 +201,7 @@ const additionalTextTitles_leftColumn=[
     "Fifa 23",
     "Red Dead Redemption 2"
 ];
-/*const additionalTextTitles_rightColumn=[
-    "Call Of Duty: Modern Warfare 2",
-    "Resident Evil 8 Village",
-    "Fifa 23",
-]*/
+
 console.log(additionalText);
 
 var infoCardsContainer=document.getElementById("infoContainer");
@@ -351,25 +347,6 @@ function productsPage()
         "God of War PS5 image",
         "Plague Tale : Requiem image"
     ];
-    /*const productsCategories=[
-        "Action game",
-        "Horror game",
-        "Rpg game",
-        "Sport game",
-
-    ]*/
-    /*var album=document.querySelector("#album");
-    var containerForProducts="<div class='container'>";
-    var rowForProducts="<div class='row' id='rowForSortingProducts'>";*/
-    /*var cart=document.getElementById("cartAlign");
-    cart.addEventListener("click",function(){
-        $(document).ready(function(){
-            $(".toggleButtonMore").click(function(){
-                console.log(123);
-                $(this).parent(".cardPadding").siblings(".content").slideToggle(320);
-            })
-        });
-    })*/
     $("#cartAlign").click(function(){
         $("#cartSummary").slideToggle("slow",function(){
             $("#bab").text("novi tekst")
@@ -393,18 +370,8 @@ function productsPage()
                 </div>
               </div>
         </div></div>`;
-        /*j++;
-        if(i==(productsCategories.length))
-        {
-            j=0;
-        }*/
     }
-    /*function PriceToFloat(price)
-    {
-        console.log(price);
-        var returnValue=price.toFixed(2);
-        return returnValue;
-    }*/
+
     productrow+=productcard;
     productrow+="</div>";
     productsContainer.innerHTML=productrow;
@@ -461,19 +428,13 @@ function productsPage()
                 checkout.style.display="block";
                 console.log(123);
             }
-        //finalPurchase.push.apply(finalPurchase,[productsImages[index],productsPrices[index]]);
-        //finalPurchase.push([productsNames[index],productsPrices[index]]);
+
         console.log(finalPurchase);
         var isValid;
-        /*if(finalBill>350){
-            alert("Oops! Your total exceeds maximum payment from one order. Please decrease your total below 350$")
-            return isValid=false;
-        }*/
+
         var productSummaryCheckout=document.getElementById("bodyProductSummary");
         checkout.addEventListener("click",function(){
             modal.style.display="block";
-            //console.log(finalPurchase.length);
-            //var productSummaryCheckout=document.getElementById("bodyProductSummary");
             var rowTable="";
             
             for(var i=0,j=1;i<namesABC.length;i++)
@@ -683,56 +644,4 @@ function loginPage(){
     })
 }
 
-/*function loginPage(){
-    console.log("ulazak u form stranu")
-    document.querySelector("#btnSubmit").addEventListener("click",formTesting)
-    var errorCollection=document.getElementsByClassName("errorMessage");
-    function formTesting()
-    {
-        //console.log("ulazak u formu");
-        var objImePrezime,objEmail,objLozinka,objPol;
-        objImePrezime=document.querySelector("#inputFullName");
-        objEmail=document.querySelector("#inputEmail");
-        objLozinka=document.querySelector("#inputPassword");
-        objPol=document.getElementsByName("#inputPol");
 
-        podaci=[];
-        greske=[];
-        
-        var regImePrezime = /^[a-zA-Z]+ [a-zA-Z]+$/;
-        if(!regImePrezime.test(objImePrezime))
-        {
-            objImePrezime.classList.add("formErrorBorder");
-            errorCollection[0].style.display="block";
-            //console.log(typeof errorCollection[0].style);
-            //greske.push("First or Last name is not valid. Try with first capital letters and space between first and last name.")
-            //document.getElementsByTagName("errorMessage").style.display="block";
-            //document.getElementsByClassName("errorMessage").style.display="block";
-            //console.log(document.getElementsByClassName("errorMessage"));
-            //console.log("greska u unosu")
-        }
-
-        var regEmail=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-        if(!regEmail.test(objEmail))
-        {
-            objEmail.classList.add("formErrorBorder");
-            errorCollection[1].style.display="block";
-            //document.getElementsByClassName("errorMessage").style.display="none";
-            //document.getElementsByTagName("errorMessage").style.display="block";
-        }
-        else{
-            objEmail.classList.remove("formErrorBorder");
-            errorCollection[1].style.display="none";
-            console.log("sada je email ispravan");
-        }
-
-        var regPassword=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-        if(!regPassword.test(objLozinka))
-        {
-            objLozinka.classList.add("formErrorBorder");
-            errorCollection[2].style.display="block";
-        }
-        //console.log(errorCollection);
-    }
-}*/
