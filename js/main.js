@@ -219,7 +219,7 @@ for(var i=0;i<Math.ceil(imgRoutes.length / 2);i++)
         {
         infoCardsRow+=`<div data-aos="fade-left" class="aosPadding col-6">
         <div class="card" style="border:6px solid #CC9901;background-color:#000000;color:white">
-            <img class="card-img-top" style="width:"50%;" src="../javaskript/images/slider/${imgRoutes[counter]}" alt="${imgAltCollection[counter]}">
+            <img class="card-img-top" style="width:"50%;" src="images/slider/${imgRoutes[counter]}" alt="${imgAltCollection[counter]}">
             <div class="card-body cardHeightSetting" style="text-align:center">
                 <h5 class="card-title">${additionalTextTitles_leftColumn[counter]}</h5>
                 <p class="card-text">${additionalText[counter]}</p>
@@ -230,7 +230,7 @@ for(var i=0;i<Math.ceil(imgRoutes.length / 2);i++)
         {
             infoCardsRow+=`<div data-aos="fade-right" class="aosPadding col-6">
             <div class="card" style="border:6px solid #CC9901;background-color:#000000;color:white">
-            <img class="card-img-top" style="width:"50%;" src="../javaskript/images/slider/${imgRoutes[counter]}" alt="${imgAltCollection[counter]}">
+            <img class="card-img-top" style="width:"50%;" src="images/slider/${imgRoutes[counter]}" alt="${imgAltCollection[counter]}">
             <div class="card-body cardHeightSetting" style="text-align:center">
                 <h5 class="card-title">${additionalTextTitles_leftColumn[counter]}</h5>
                 <p class="card-text">${additionalText[counter]}</p>
@@ -358,7 +358,7 @@ function productsPage()
     for(let i=0;i<productsImages.length;i++)
     {
         productcard+=`<div class='group-1;col-sm-12 col-lg-4' style="overflow:hidden;margin-bottom:15px;"><div class='card h-100 mb-4 box-shadow cardPaddingForResponsive' style="border:6px solid #CC9901;background-color:#000000;color:white">
-            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="${productAltTitles[i]}" style="height:280px;width: 100%; display: block;" src="../javaskript/images/slider/${productsImages[i]}" data-holder-rendered="true">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="${productAltTitles[i]}" style="height:280px;width: 100%; display: block;" src="images/slider/${productsImages[i]}" data-holder-rendered="true">
             <div class="card-body large">
                 <h4 class="card-text" style="padding:10px;text-align:center;line-height:normal">${productsNames[i]}</h4>
                 <h5 style="line-height:normal;text-align:center">${parseFloat(productsPrices[i]).toFixed(2)} $</h5>
@@ -441,14 +441,12 @@ function productsPage()
             {
                 rowTable+="<tr>"
                 var rowTableInfo="";
-                /*for(var j=0;j<1;j++)
-                {*/
+
                     rowTableInfo+=`<th scope="row">${j++}</th>
                     <td><img src="images/slider/${imagesABC[i]}"/></td>
                     <td>${namesABC[i]}</td>
                     <td>${pricesABC[i]}$</td>`
-                    //console.log(productsName.length);
-                    //}
+
                 if(i==(namesABC.length-1))
                 {
                     rowTableInfo+=`<tfoot><p style='text-align:center'>Your total:${finalBill}.00$</p></tfoot>`;
@@ -461,7 +459,6 @@ function productsPage()
             var report=document.getElementById("myModal1");
             var proceed=document.getElementById("proceedToCheckout");
             proceed.addEventListener("click",function(){
-                /*alert("Thank you for purchasing at our store.Expect your order to be delivered to you between 2 to 5 work days! Happy gaming :)")*/
 
                 modal.style.display="none";
                 report.style.display="block";
@@ -489,7 +486,7 @@ function productsPage()
 
 
 
-//-------OBRADA FORME--------
+//-------FORM VALIDATION--------
 
 function loginPage(){
     var objFirstLastName=document.getElementById("inputFullName");
@@ -527,7 +524,6 @@ function loginPage(){
         var test=regexEmail.test(objEmail.value);
         var errEmail=document.getElementById("errMesEmail");
         errEmail.style.textAlign="center";
-        //console.log(errFullName);
         if(test){
             objEmail.classList.add("formSuccessBorder");
             objEmail.classList.remove("formErrorBorder");
@@ -549,7 +545,6 @@ function loginPage(){
         var test=regexPassword.test(objPassword.value);
         var errPassword=document.getElementById("errMesPassword");
         errPassword.style.textAlign="center";
-        //console.log(errFullName);
         if(test){
             objPassword.classList.add("formSuccessBorder");
             objPassword.classList.remove("formErrorBorder");
@@ -608,10 +603,7 @@ function loginPage(){
             //alert(`Thank you ${objFirstLastName.value} for contacting us. We will try to send feedback to your email ${objEmail.value} as soon as possible!`);
             
             var paragraphForm=document.getElementById("paragraphFromJavascript");
-            //var paragraphFormErr=document.getElementById("paragraphFromJavascriptError");
-            /*var formReportContent=document.getElementsByClassName("modal-content1");*/
-            //formReportContent.innerHTML=`Thank you ${objFirstLastName.value} for contacting us. We will try to send feedback to your email ${objEmail.value} as soon as possible!`
-            //formReport.innerHTML=`Thank you ${objFirstLastName.value} for contacting us. We will try to send feedback to your email ${objEmail.value} as soon as possible!`
+         
             paragraphForm.innerHTML=`Thank you ${objFirstLastName.value} for contacting us. We will try to send feedback to your email ${objEmail.value} as soon as possible!`;
             
             formReport.style.display="block";
@@ -634,7 +626,6 @@ function loginPage(){
             var paragraphFormErr=document.getElementById("paragraphFromJavascriptError")
             paragraphFormErr.innerHTML=`There are some errors in your input. Please correct errors to proceed with sending`;
             formReport.style.display="block";
-            //alert(`There are some errors in your input. Please correct errors to proceed with sending`);
         }
         var span = document.getElementsByClassName("close")[0];
 
