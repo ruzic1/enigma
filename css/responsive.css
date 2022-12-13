@@ -1,0 +1,146 @@
+@media screen and (max-width:993px){
+    .cardHeightSetting{
+        height:500px;
+    }
+    .cardHeightSetting h5{
+        font-size:25px;
+    }
+}
+@media screen and (max-width:800px){
+    .row {
+        width:100%;
+        flex-direction: column;
+    }
+    .aosPadding{
+        max-width:100%;
+    }
+}
+@media screen and (max-width:507px){
+    #collapseButtonFormat{
+        margin:0px auto;
+    }
+    #font{
+        font-size:27px;
+        position:relative;
+    }
+    #bodyProductSummary tr td img{
+        width:80px;
+      }
+}
+
+@media screen and (max-width:720px){
+    .validationFormatting{
+        width:50vw;
+        margin:0px auto;
+        display:flex;
+        justify-content:center;
+    }
+    #cartAlign{
+        flex-direction: column;
+    }
+    .cartIcon{
+        margin:0px auto;
+    }
+    .row .item{
+        flex-direction:column;
+        width:100%;
+    }
+    .row .item img{
+        width:100%;
+    }
+    .imgContainer img{
+        width:100%;
+    }
+    .modal-content{
+        padding:0px;
+    }
+    #bodyProductSummary p{
+        font-size:20px;
+    }
+    #bodyProductSummary button{
+        margin:5px auto;
+    }
+    .bottom-left{
+        width:80%;
+        margin:0px auto;
+        left:40px;
+    }
+
+    .form-items>p{
+        font-size:2.8vw;
+    }
+}
+@media screen and (max-width:630px){
+     .modal-content tbody tr td{
+        font-size:17px;
+    }
+    .modal-content tbody{
+        font-size:17px;
+    }
+    #proceedToCheckout{
+        width:50%;
+        font-size:16px;
+    }
+}
+@media screen and (max-width:422px){
+    .link-Heading{
+        width:100%;
+        margin:0px auto
+    }
+    /*.link-Heading>#font{
+        font-size:5vw;
+    }*/
+    .modal-content tbody tr td{
+        font-size:12px;
+    }
+    .bottom-left{
+        width:95%;
+        left:0px;
+        right:0px;
+        
+    }
+}
+@media screen and (max-width:369px){
+    #priceInfoFlex{
+        font-size:13px;
+    }
+    #priceInfoFlex h5{
+        font-size:18px;
+    }
+    .cardHeightSetting{
+        height:fit-content;
+    }
+    .cardPaddingForResponsive{
+        padding:5px;
+    }
+    /*.card-body{
+        font-size:6px;
+    }*/
+    .cardHeadingForResponsive{
+        font-size:15px;
+    }
+    .card-body h4{
+        position:relative;
+        bottom:5px;
+    }
+    .card-body h5{
+        position:relative;
+        padding:8px;
+        bottom:5px;
+    }
+    #bodyProductSummary{
+        width:100%;
+
+    }
+    #bodyProductSummary tr td img{
+        width:40px;
+    }
+    .bottom-left{
+        bottom:50px;
+        
+    }
+}
+
+/*@media screen and (min-width:507px){
+    
+}*/
