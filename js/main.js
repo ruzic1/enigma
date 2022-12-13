@@ -5,14 +5,14 @@ defaultPartsOfPages();
 
 
 var pagepath=window.location.pathname+window.location.search;
-if(pagepath=='/C:/Users/ruzic/Desktop/javaskript/index.html'){
+if(pagepath=='index.html'){
     indexPage();
     //sliderFunct();
 }
-if(pagepath=='/C:/Users/ruzic/Desktop/javaskript/loginPage.html'){
+if(pagepath=='loginPage.html'){
     loginPage();
 }
-if(pagepath=='/C:/Users/ruzic/Desktop/javaskript/productsPage.html'){
+if(pagepath=='productsPage.html'){
     console.log("ulazak u product page");
     productsPage();
 }
