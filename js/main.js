@@ -1,5 +1,5 @@
 
-/*POZIVANJE PODRAZUMEVANIH FUNKCIJA */
+/*Calling default functions for pages */
 defaultLinks();
 defaultPartsOfPages();
 
@@ -223,7 +223,7 @@ for(var i=0;i<Math.ceil(imgRoutes.length / 2);i++)
             <div class="card-body cardHeightSetting" style="text-align:center">
                 <h5 class="card-title">${additionalTextTitles_leftColumn[counter]}</h5>
                 <p class="card-text">${additionalText[counter]}</p>
-                <a href="../javaskript/productsPage.html" class="btn btn-primary">View more</a>
+                <a href="/enigma/productsPage.html" class="btn btn-primary">View more</a>
             </div></div></div>`;
         }
         if(j!=0&&j%2==1)
@@ -413,7 +413,7 @@ function productsPage()
         row+="<div class='row col-lg-12 ml-0 pl-0 mr-0 pr-0'>";
         var itemInRow=`<div class='item'>
         <div id='imgContainerFlex'>
-            <img src="../javaskript/images/slider/${productsImages[index]}"/>
+            <img src="images/slider/${productsImages[index]}"/>
         </div>    
         <div id='priceInfoFlex' style='width:100%'>
         <h5>${productsNames[index]}</h5>
