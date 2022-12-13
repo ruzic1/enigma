@@ -234,7 +234,7 @@ for(var i=0;i<Math.ceil(imgRoutes.length / 2);i++)
             <div class="card-body cardHeightSetting" style="text-align:center">
                 <h5 class="card-title">${additionalTextTitles_leftColumn[counter]}</h5>
                 <p class="card-text">${additionalText[counter]}</p>
-                <a href="../javaskript/productsPage.html" class="btn btn-primary">View more</a>
+                <a href="/enigma/productsPage.html" class="btn btn-primary">View more</a>
             </div></div></div>`;
         
         }
