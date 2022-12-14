@@ -45,7 +45,7 @@ const linkNames=[
     "Home",
     "Products",
     "About Us",
-    "Login"
+    "Contact"
 ];
 for(var i=0;i<linkRoutes.length;i++)
 {
