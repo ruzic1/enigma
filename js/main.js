@@ -3,7 +3,7 @@
 defaultLinks();
 defaultPartsOfPages();
 
-
+//Calling functions specified for every page
 var pagepath=window.location.pathname+window.location.search;
 if(pagepath=='/enigma/index.html'||pagepath=='/enigma/'){
     indexPage();
@@ -13,11 +13,11 @@ if(pagepath=='/enigma/loginPage.html'){
     loginPage();
 }
 if(pagepath=='/enigma/productsPage.html'){
-    console.log("ulazak u product page");
     productsPage();
 }
-console.log(pagepath);
+//End of calling
 
+//button to top 
 function defaultPartsOfPages(){
      $(window).scroll(function() {
         if ($(this).scrollTop()) {
@@ -31,7 +31,8 @@ function defaultPartsOfPages(){
         $("html, body").animate({scrollTop: 0}, 1000);
      });
 }
-
+//-----
+//Display of navigation links dynamically
 function defaultLinks(){
 console.log("Entering links");
 const linkRoutes=[
@@ -64,14 +65,13 @@ for(var i=0;i<linkRoutes.length;i++)
     headerLinkTag.append(headerLinkName);
 
     headerLiTag.append(headerLinkTag);
-    console.log(headerLiTag);
     headerList.append(headerLiTag);
 
 }
 
 }
+//End
 
-/* ---- MAIN, DINAMICKO ISPISIVANJE SLIKA ---- */
 const slideImages=[
     "stalker.jpg",
     "uncharted.jpg",
@@ -85,71 +85,35 @@ const sliderImagesAlt=[
 
 
 
-
+//Slider function that changes images every 5 seconds
 let slideIndex = 0;
 
 showSlides();
 
 function showSlides() {
   let i;
-  //identifierSlider++;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  //console.log(document.querySelectorAll("textBlockSlider"))
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    //textInformationSlider[i].classList.remove("active");
-    //textInformationSlider[i].style.display="none";
-    //textInformationSlider[i].classList.remove("active");
-    //textInformationSlider[i].className=textInformationSlider[i].className.replace("active ","")
   }
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
-    //textInformationSlider[i].className = textInformationSlider[i].className.replace(" active", "");
-    //textInformationSlider[i].classList.add("active");
-    //textInformationSlider[i].className=textInformationSlider[i].className.replace("active ","")
+
 }
-//iskoriscen je naredni if uslov kako bi se izvrsio append child elemenata roditeljskim elementima, i samim tim onemogucilo stvaranje viskova
-    /*if(identifierSlider<=slides.length)
-    {
-        identifierHeading++;
-        textHeaderTagSlider.append(textTitleSlider[identifierHeading-1]);
-    }*/
-    //console.log(textHeaderTagSlider)
+
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 
-  //textInformationSlider[slideIndex-1].className+=" active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
-  //console.log("duzina naslova"+textBlockSliderHeader.length)
+  setTimeout(showSlides, 5000); 
+
 }
+//end
 
-/*let slideIndex=1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    console.log("duzina slajda: "+slides.length);
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-
-    console.log("indeks slajda: "+slideIndex);
-
-    slides[slideIndex-1].style.display = "block";
-}*/
-
+//----------INDEX PAGE----------
 function indexPage(){
-    console.log(1);
 const imgRoutes=[
     "residentevil4new.jpg",
     "eldenring.jpg",
@@ -160,12 +124,6 @@ const imgRoutes=[
     "fifa23.jpg",
     "rdr2slider.jpg"
 ];
-/*const imgRoutes1=[
-    "cod2.jpg",
-    "rz.png",
-    "fifa23.jpg",
-    "rdr2slider.jpg",
-]*/
 const imgAltCollection=[
     "Resident-evil-4-remake",
     "Elden-ring",
@@ -184,13 +142,7 @@ const additionalText=[
     "FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, men’s and women’s FIFA World Cup™ coming during the season, women’s club teams, cross-play features, and more",
     "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online"
 ];
-/*const additionalText1=[
-    "Call of Duty: Modern Warfare II is a first-person shooter video game developed by Infinity Ward for PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S and Microsoft Windows. It is the nineteenth game in the Call of Duty franchise, and the sequel to Call of Duty: Modern Warfare. Its logo was revealed on April 28th, 2022 the game was released on October 28th, 2022.",
-    "The next generation of survival horror rises in the form of Resident Evil Village,the eighth major entry in the Resident Evil series. With ultra-realistic graphics powered by the RE Engine,fight for survival as danger lurks around every corner.Set a few years after the horrifying events in the critically acclaimed Resident Evil 7 biohazard,the all-new storyline begins with Ethan Winters and his wife Mia living peacefully in a new location,free from their past nightmares.Just as they are building their new life together,tragedy befalls them once again.When BSAA captain Chris Redfield attacks their home,Ethan must once again head into hell to get his kidnapped daughter back.",
-    "FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, men’s and women’s FIFA World Cup™ coming during the season, women’s club teams, cross-play features, and more",
-    "America, 1899. The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. Those who will not surrender or succumb are killed.After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him. From the creators of Grand Theft Auto V and Red Dead Redemption, Red Dead Redemption 2 is a sprawling tale of life in America at the dawn of the modern age."
-    "The next generation of survival horror rises in the form of Resident Evil Village,the eighth major entry in the Resident Evil series. With ultra-realistic graphics powered by the RE Engine,fight for survival as danger lurks around every corner.Set a few years after the horrifying events in the critically acclaimed Resident Evil 7 biohazard,the all-new storyline begins with Ethan Winters and his wife Mia living peacefully in a new location,free from their past nightmares.Just as they are building their new life together,tragedy befalls them once again.When BSAA captain Chris Redfield attacks their home,Ethan must once again head into hell to get his kidnapped daughter back.",
-];*/
+
 const additionalTextTitles_leftColumn=[
     "Resident Evil 4 Remake",
     "Elden Ring",
@@ -202,7 +154,6 @@ const additionalTextTitles_leftColumn=[
     "Red Dead Redemption 2"
 ];
 
-console.log(additionalText);
 
 var infoCardsContainer=document.getElementById("infoContainer");
 var infoCardsContainerSection="<section class='container md'>";
@@ -238,25 +189,12 @@ for(var i=0;i<Math.ceil(imgRoutes.length / 2);i++)
             </div></div></div>`;
         
         }
-            /*if(j!=0&&j%2==1)
-            {
-                col-6 m6 l6 aosPadding
-                infoCardsRow+=`<div data-aos="zoom-in-right" class="col s12 m6 l6 aosPadding">
-        <div class="card">
-            <img class="card-img-top" style="width:"50%;" src="../javaskript/images/slider/${imgRoutes[counter]}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">${additionalTextTitles_leftColumn[counter]}</h5>
-                <p class="card-text">${additionalText[counter]}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div></div></div>`;
-            }*/
+
             counter++;
         }
         infoCardsRow+=`</article>`;
         infoCardsContainerSection+=infoCardsRow;
-        //counter++;
     infoCardsRow+=`</article>`;
-    console.log(i);
 }
 infoCardsContainerSection+="</section>";
 infoCardsContainer.innerHTML=infoCardsContainerSection;
@@ -264,24 +202,16 @@ infoCardsContainer.innerHTML=infoCardsContainerSection;
 
 const dugmici=document.getElementsByClassName("toggleButtonMore");
 const detailed=document.getElementsByClassName("cardPadding");
-console.log("Broj prosirujucih sektora:"+detailed.length);
 var i;
-
-/*$(document).ready(function(){
-    $(".toggleButtonMore").click(function(){
-        console.log(123);
-        $(this).parent(".cardPadding").siblings(".content").slideToggle(320);
-    })
-});*/
-
 }
+//end of indexPage function
+
 
 
 //----------PRODUCTS PAGE----------
 function productsPage()
 {
     const productsNames=[
-        /*"",*/
         "Call of Duty : Modern Warfare 2(2022)",
         "Demon Souls(2020)",
         "Elden Ring(2022)",
@@ -376,15 +306,8 @@ function productsPage()
     productrow+="</div>";
     productsContainer.innerHTML=productrow;
     var row="";
-    /*var cartButtonCollection=document.getElementsByClassName("buttonCart");
-    console.log(cartButtonCollection);*/
-    /*cartButtonCollection.addEventListener("click",function(element){
-        
-    })*/
     var finalBill=0;
-    //var finalPurchase=[];
     var checkout=document.getElementById("checkoutHeading");
-    //checkout.setAttribute("data-target","#modalCart");
     var cartSummary=document.getElementById("cartSummaryContainer")
     let container=[...document.getElementsByClassName("buttonCart")];
     var namesABC=[];
@@ -392,7 +315,6 @@ function productsPage()
     var imagesABC=[];
     container.forEach((item,index)=>{
         item.addEventListener("click",()=>{
-            //console.log(index);
             addToCartSection(index);
             namesABC.push(productsNames[index]);
             pricesABC.push(productsPrices[index]);
@@ -402,6 +324,7 @@ function productsPage()
 
     var finalPurchase;
     var productsName=[];
+    //Cart function
     function addToCartSection(index)
     {
         console.log(namesABC);
