@@ -53,7 +53,7 @@ for(var i=0;i<linkRoutes.length;i++)
     headerLiTag.setAttribute("class","nav-item ABC");
     var headerLinkTag=document.createElement("a");
     headerLinkTag.style="text-decoration:none";
-    headerLinkTag.style="color:white";
+    headerLinkTag.style="color:black";
     if(i==0)
     {
         headerLinkTag.setAttribute("href","nav-link active");
