@@ -491,7 +491,7 @@ function productsPage()
 function loginPage(){
     var objFirstLastName=document.getElementById("inputFullName");
     var objEmail=document.getElementById("inputEmail");
-    var objPassword=document.getElementById("inputPassword");
+    //var objPassword=document.getElementById("inputPassword");
     var objTextArea=document.getElementById("inputTextArea");
     var regexFirstLastName=/^[A-ZŠĐČĆŽ][a-zšđčćž]{2,}(\s[A-ZŠĐČĆŽ][a-zšđčćž]{2,})+$/;
     objFirstLastName.addEventListener("blur",testFirstLastName);
@@ -539,7 +539,7 @@ function loginPage(){
         }
     }
 
-    objPassword.addEventListener("blur",testPassword);
+    /*objPassword.addEventListener("blur",testPassword);
     var regexPassword=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
     function testPassword(){
         var test=regexPassword.test(objPassword.value);
@@ -558,7 +558,7 @@ function loginPage(){
             errPassword.innerHTML="Password is incorrect. Make sure that your password has between 6 and 16 characters, while atleast one of those characters should be special symbol(!,.,/) or number";
             errPassword.style.color="red";
         }
-    }
+    }*/
     objTextArea.addEventListener("blur",testTextArea);
 
     function testTextArea(){
@@ -595,7 +595,7 @@ function loginPage(){
         success=true;
         testFirstLastName(),
         testEmail(),
-        testPassword();
+        //testPassword();
         testTextArea();
         var formReport=document.getElementById("myModal1");
         if(success){
@@ -611,15 +611,15 @@ function loginPage(){
             //formReport.innerHTML=formReportContent
             objFirstLastName.value="";
             objEmail.value="";
-            objPassword.value="";
+            //objPassword.value="";
             objTextArea.value="";
             errFullName="";
             errEmail="",
-            errPassword="",
+            //errPassword="",
             errTest="",
             objEmail.classList.remove("formSuccessBorder");
             objFirstLastName.classList.remove("formSuccessBorder");
-            objPassword.classList.remove("formSuccessBorder");
+            //objPassword.classList.remove("formSuccessBorder");
             objTextArea.classList.remove("formSuccessBorder");
         }
         else{
@@ -631,6 +631,7 @@ function loginPage(){
 
                 span.onclick = function() { 
                     formReport.style.display = "none";
+                    window.location.reload();
                   }
     })
 }
