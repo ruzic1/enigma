@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+    <rss version="2.0">
+        <channel>
+            <item>
+				<title>Enigma game store</title>
+				<description>Welcome to Enigma game store!</description>
+				<link>https://ruzic1.github.io/enigma/index.html</link>
+			</item>
+            <item>
+				<title>Enigma game store - Products</title>
+				<description>Check our newest game offers today!</description>
+				<link>https://ruzic1.github.io/enigma/productsPage.html</link>
+			</item>
+            <item>
+				<title>Enigma game store - About us</title>
+				<description>Get to know us!</description>
+				<link>https://ruzic1.github.io/enigma/aboutusPage.html</link>
+			</item>
+            <item>
+				<title>Enigma game store - Contact</title>
+				<description>Ask us something! We are more than willing to help you!</description>
+				<link>https://ruzic1.github.io/enigma/loginPage.html</link>
+			</item>
+        </channel>
+    </rss>
